@@ -352,7 +352,7 @@ function Wheel({ items, onResult }: { items: string[]; onResult: (value: string)
         </div>
         {/* Wheel */}
         <div
-          className="size-72 rounded-full border-4 border-white/70 shadow-2xl flex items-center justify-center select-none"
+          className="size-56 sm:size-64 md:size-72 rounded-full border-4 border-white/70 shadow-2xl flex items-center justify-center select-none"
           style={{
             background: gradient,
             transform: `rotate(${angle}deg)`,
@@ -409,32 +409,38 @@ export default function FreshmanQuestApp() {
 
 
   return (
-    <div className="min-h-dvh font-sans bg-[radial-gradient(1000px_600px_at_70%_-10%,#1f2937_0%,#0f172a_40%,#0b1224_100%)] text-slate-100">
-      <div className="max-w-4xl mx-auto px-5 py-10 md:py-14">
+    <div className="min-h-screen pt-[env(safe-area-inset-top)] font-sans bg-[radial-gradient(1000px_600px_at_70%_-10%,#1f2937_0%,#0f172a_40%,#0b1224_100%)] text-slate-100">
+      <div className="mx-auto w-full max-w-xl sm:max-w-2x1 md:max-w-4x1 px-4 sm:px-5 py-6 sm:py-10 md:py-14">
         {/* Header */}
-        <header className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="SCHOOL OF IT&E" className="h-64 w-auto rounded-md" />
-            <div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Welcome,KBTU Freshman!🏛️ 
-            </h1>
-            <p className="text-slate-300 mt-2">
-              {" "}
-              <span className="text-cyan-300 font-semibold">Quest Roadmap</span>{" "}
-              — finish all steps to unlock the Wheel of Fortune.
-            </p>
+        <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          {/* Лого + заголовок */}
+          <div className="flex items-center gap-3 md:items-start">
+            <img
+              src={logo}
+              alt="School of IT&E"
+              className="h-14 w-14 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain rounded-md shrink-0"
+            />
+            <div className="min-w-0">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-tight break-words">
+                Welcome, KBTU Freshman! 🏛️
+              </h1>
+              <p className="text-slate-300 mt-1 text-sm sm:text-base">
+                <span className="text-cyan-300 font-semibold">Quest Roadmap</span> —
+                  finish all steps to unlock the Wheel of Fortune.
+              </p>
           </div>
         </div>
-          <div className="flex items-center gap-2">
-            <input
-              placeholder="Your name (optional)"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="px-3 py-2 rounded-xl bg-white/10 border border-white/20 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/40"
-            />
-          </div>
-        </header>
+
+        {/* Инпут справа (на мобилке — на всю ширину) */}
+        <div className="w-full md:w-auto">
+          <input
+            placeholder="Your name (optional)"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full px-3 py-2 rounded-xl bg-white/10 border border-white/20 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/40"
+          />
+        </div>
+      </header>
 
         {/* Progress */}
         <div className="mt-6">
