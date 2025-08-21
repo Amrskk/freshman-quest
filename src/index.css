@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* optional niceties */
+* { scrollbar-width: thin; }
+::selection { background: rgba(34,211,238,.25); }
+
+html { @apply antialiased; }
