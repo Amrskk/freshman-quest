@@ -50,6 +50,14 @@ const STEPS: Step[] = [
       "Pick a club or a community to try in the first month.",
     bullets: ["Attend the clubs fair", "Find a club for yourself", "Talk to a mentor"],
   },
+  {
+    id: "GUIDeon bot",
+    title: "GUIDeon Bot",
+    summary:
+      "Use this bot to get quick answers and necessary information to start your journey.",
+    bullets: ["Find GUIDeon bot in Telegram", "Start the bot", "Read the instructions"],
+    links: [{ label: "GUIDeon Bot", href: "https://t.me/GUIDeonProBot" }],
+  }
 ];
 
 // ---- Utilities ----
