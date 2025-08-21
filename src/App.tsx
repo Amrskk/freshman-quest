@@ -111,7 +111,7 @@ const TEMPLATES: Record<Locale, string[]> = {
 
 const PLACES = ["the library", "Main Hall", "Cafeteria A", "the printing room", "Dorm lobby"];
 const TOPICS = ["calculus", "physics", "linear algebra", "programming principles", "discrete structures"];
-const CLUBS  = ["Robotics", "Debate", "Music", "AI Society", "Sports"];
+const CLUBS  = ["GDG", "Debate", "Enactus", "AI Initiative Club", "Mountain Kings"];
 const TASKS  = ["group study", "project sprint", "lab prep", "note review", "morning planning"];
 const EVENTS = ["orientation", "first lecture", "TA session", "club fair", "lab intro"];
 
